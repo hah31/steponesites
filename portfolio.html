@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Sites We've Built | Step One Sites</title>
+  <meta name="description" content="See hand-coded websites built by Step One Sites for small businesses in DuPage County, IL. Every site is mobile-first and built to get found on Google.">
+  <link rel="canonical" href="https://stepone.sites/portfolio.html">
+  <link rel="icon" href="logo.png" type="image/png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Portfolio — Sites We've Built | Step One Sites">
+  <meta property="og:description" content="See hand-coded websites built by Step One Sites for small businesses in DuPage County, IL.">
+  <meta property="og:url" content="https://stepone.sites/portfolio.html">
+  <meta property="og:image" content="https://stepone.sites/logo.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Portfolio — Sites We've Built | Step One Sites">
+  <meta name="twitter:description" content="See hand-coded websites built by Step One Sites for small businesses in DuPage County, IL.">
+  <meta name="twitter:image" content="https://stepone.sites/logo.png">
+
+  <!-- Google Fonts — async load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=DM+Sans:wght@300;400;500&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@800&family=DM+Sans:wght@300;400;500&display=swap">
+  </noscript>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JSON-LD: CreativeWork placeholders -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Step One Sites Portfolio",
+    "description": "A collection of hand-coded websites built by Step One Sites for small businesses in DuPage County, IL.",
+    "url": "https://stepone.sites/portfolio.html",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "Coming Soon — First Client",
+            "description": "Placeholder for the first hand-coded website built by Step One Sites.",
+            "creator": {
+              "@type": "Organization",
+              "name": "Step One Sites"
+            }
+          }
+        }
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Step One Sites home">
+        <img src="logo.png" alt="Step One Sites logo" height="36">
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div class="nav-right">
+        <a href="index.html#contact" class="btn-nav-cta"><span>Get Your Site</span></a>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" role="navigation" aria-label="Mobile navigation">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html" class="active">Portfolio</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="index.html#contact" class="btn-nav-cta"><span>Get Your Site</span></a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page Header -->
+    <header class="page-header container">
+      <h1>Sites We've Built</h1>
+      <p>Every site is hand-coded, mobile-first, and built to get found.</p>
+    </header>
+
+    <!-- Filter Bar -->
+    <section class="container" aria-label="Portfolio filter">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="auto-trades">Auto &amp; Trades</button>
+        <button class="filter-btn" data-filter="food">Food</button>
+        <button class="filter-btn" data-filter="health">Health</button>
+        <button class="filter-btn" data-filter="beauty">Beauty</button>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="portfolio-grid">
+        <article class="portfolio-card" data-category="auto-trades">
+          <div class="portfolio-preview gradient-1">Coming Soon</div>
+          <div class="portfolio-body">
+            <span class="portfolio-badge">Auto &amp; Trades</span>
+            <h3>First Client</h3>
+            <p>A hand-coded site for a local trades business. Details coming soon as we onboard our first clients.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="food">
+          <div class="portfolio-preview gradient-2">Coming Soon</div>
+          <div class="portfolio-body">
+            <span class="portfolio-badge">Food</span>
+            <h3>First Client</h3>
+            <p>A clean, fast website for a DuPage County restaurant or food business. Launching soon.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card" data-category="health">
+          <div class="portfolio-preview gradient-3">Coming Soon</div>
+          <div class="portfolio-body">
+            <span class="portfolio-badge">Health</span>
+            <h3>First Client</h3>
+            <p>A mobile-first site for a local health or wellness provider. Stay tuned for the live launch.</p>
+          </div>
+        </article>
+
+        <article class="portfolio-card cta-card" data-category="all">
+          <div>
+            <h3>Could this be your business?</h3>
+            <p>We're building sites for DuPage County businesses right now. Be one of our first — and get the most attention.</p>
+            <a href="index.html#contact" class="btn btn-primary">Get Started</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Bottom CTA Strip -->
+    <section class="cta-strip">
+      <div class="container">
+        <h2>Ready to be on this page?</h2>
+        <p>Your business deserves a website that works as hard as you do.</p>
+        <a href="index.html#contact" class="btn btn-primary">Get Your Website</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="index.html" class="footer-logo">
+          <img src="logo.png" alt="Step One Sites logo" height="28">
+        </a>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Step One Sites</span>
+        <span>Serving DuPage County, IL</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
