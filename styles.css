@@ -622,17 +622,58 @@ section {
 /* ============================================
    SOCIAL PROOF
    ============================================ */
-.proof-placeholder {
-  max-width: 560px;
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 800px;
   margin: 0 auto;
-  text-align: center;
-  padding: 40px 28px;
-  border: 2px dashed var(--border);
-  border-radius: var(--radius);
 }
 
-.proof-placeholder p {
+@media (min-width: 640px) {
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.review-card {
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.review-stars {
+  color: var(--yellow);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+.review-text {
   font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--white);
+  flex: 1;
+}
+
+.review-author {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.review-author strong {
+  font-size: 0.9rem;
+  color: var(--white);
+}
+
+.review-author span {
+  font-size: 0.8rem;
   color: var(--muted);
 }
 
@@ -910,12 +951,39 @@ section {
   margin-bottom: 10px;
 }
 
+.portfolio-badge--artist {
+  color: var(--yellow);
+  background: rgba(247, 200, 67, 0.1);
+}
+
 .portfolio-body h3 {
   margin-bottom: 8px;
 }
 
 .portfolio-body p {
   font-size: 0.9rem;
+}
+
+.portfolio-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.portfolio-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--teal);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.portfolio-link:hover {
+  color: var(--yellow);
 }
 
 .portfolio-card.cta-card {
