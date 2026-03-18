@@ -480,12 +480,12 @@ p {
    SECTIONS — General
    ============================================ */
 section {
-  padding: 48px 0;
+  padding: 64px 0;
 }
 
 @media (min-width: 768px) {
   section {
-    padding: 80px 0;
+    padding: 96px 0;
   }
 }
 
