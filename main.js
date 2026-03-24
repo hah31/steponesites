@@ -54,30 +54,47 @@
 
   /* --- Contact Form — Progressive Enhancement --- */
   var contactForm = document.getElementById('contact-form');
-  var thankYou = document.getElementById('form-thankyou');
+  var successOverlay = document.getElementById('success-overlay');
+  var successClose = document.getElementById('success-close');
 
-  if (contactForm && thankYou) {
+  if (contactForm && successOverlay) {
     contactForm.addEventListener('submit', function (e) {
-      var formData = new FormData(contactForm);
-
-      // Only intercept if we can do fetch
-      if (typeof fetch === 'undefined') return;
-
+      if (typeof fetch === 'undefined') return; // fallback: normal submit
       e.preventDefault();
+
+      var formData = new FormData(contactForm);
 
       fetch(contactForm.action, {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
-      }).then(function (response) {
-        if (response.ok) {
+      })
+      .then(function (response) { return response.json(); })
+      .then(function (data) {
+        if (data.success === 'true' || data.success === true) {
           contactForm.style.display = 'none';
-          thankYou.classList.add('show');
+          successOverlay.classList.add('show');
+          if (successClose) successClose.focus();
         }
-      }).catch(function () {
-        // On failure, let the form submit normally
+      })
+      .catch(function () {
+        // On network failure, fall back to native form submit
         contactForm.submit();
       });
+    });
+
+    // Dismiss modal via "Got it" button
+    if (successClose) {
+      successClose.addEventListener('click', function () {
+        successOverlay.classList.remove('show');
+      });
+    }
+
+    // Dismiss modal by tapping the dark backdrop
+    successOverlay.addEventListener('click', function (e) {
+      if (e.target === successOverlay) {
+        successOverlay.classList.remove('show');
+      }
     });
   }
 

@@ -205,7 +205,10 @@
           </ul>
         </div>
         <div>
-          <form class="contact-form" method="POST" action="https://formspree.io/f/FORM_ID" id="contact-form">
+          <form class="contact-form" method="POST" action="https://formsubmit.co/ajax/hashim.hassan.us@gmail.com" id="contact-form">
+            <input type="hidden" name="_subject" value="New Website Inquiry — Step One Sites">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required autocomplete="name">
@@ -239,9 +242,13 @@
             </div>
             <button type="submit" class="form-submit">Send My Info</button>
           </form>
-          <div class="form-thankyou" id="form-thankyou">
-            <h3>Thanks! We'll be in touch.</h3>
-            <p>We typically respond within one business day. Talk soon!</p>
+          <div class="success-overlay" id="success-overlay" role="dialog" aria-modal="true" aria-labelledby="success-title">
+            <div class="success-modal">
+              <div class="success-icon" aria-hidden="true">✓</div>
+              <h3 id="success-title">Info Submitted!</h3>
+              <p>Thanks! We'll reach out within one business day.</p>
+              <button class="success-close" id="success-close" aria-label="Close confirmation">Got it</button>
+            </div>
           </div>
         </div>
       </div>
